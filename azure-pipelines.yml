@@ -22,12 +22,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      # Install jwt-cli
 
-      brew install mike-engel/jwt-cli/jwt-cli
-
-      # Ensure it worked ok by running the help command
-      jwt help
 
       npm install -g jwt-cli
       
