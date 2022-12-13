@@ -26,7 +26,7 @@ steps:
 - task: PowerShell@2
   inputs:
     targetType: 'inline'
-    script: 'gh token generate --key ./samplegithubappmarkcunninghamuk.2022-12-13.private-key.pem  --app_id 271969'
+    script: 'gh token generate --key samplegithubappmarkcunninghamuk.2022-12-13.private-key.pem  --app_id 271969'
 
 
 #- task: PowerShell@2
