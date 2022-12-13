@@ -18,13 +18,19 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
   
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: 'gh extensions install Link-/gh-token'
+
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: 'ghtoken generate --key samplegithubappmarkcunninghamuk.2022-12-13.private-key.pem  --app_id 271969'
+
 
 #- task: PowerShell@2
 #  inputs:
 #    targetType: 'inline'
 #    script: 'gh repo create markcunninghamuk/myRepo1 --public'
 
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: 'ghtoken generate --key samplegithubappmarkcunninghamuk.2022-12-13.private-key.pem  --app_id 271969'
