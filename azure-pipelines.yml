@@ -21,7 +21,10 @@ steps:
 - task: PowerShell@2
   inputs:
     targetType: 'inline'
-    script: 'gh extensions install Link-/gh-token'
+    script: |
+      gh extensions install Link-/gh-token
+      
+      gh token
 
 - task: PowerShell@2
   inputs:
