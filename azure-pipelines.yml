@@ -33,7 +33,7 @@ steps:
 - task: PowerShell@2
   inputs:
     targetType: 'inline'
-    script: 'gh token generate --key $(Build.SourcesDirectory)/samplegithubappmarkcunninghamuk.2022-12-13.private-key.pem  --app_id 271969  --install_jwt_cli | jq'
+    script: 'gh token generate --key $(Build.SourcesDirectory)/samplegithubappmarkcunninghamuk.2022-12-13.private-key.pem  --app_id 271969 | jq'
 
 
 #- task: PowerShell@2
