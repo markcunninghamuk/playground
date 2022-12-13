@@ -19,10 +19,10 @@ steps:
   displayName: 'Run a multi-line script'
   
 
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: 'gh repo create markcunninghamuk/myRepo --public'
+#- task: PowerShell@2
+#  inputs:
+#    targetType: 'inline'
+#    script: 'gh repo create markcunninghamuk/myRepo1 --public'
 
 - task: PowerShell@2
   inputs:
