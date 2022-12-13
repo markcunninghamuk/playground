@@ -34,7 +34,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      gh-token -h
+      gh token -h
       
       #gh token generate --key $(Build.SourcesDirectory)/samplegithubappmarkcunninghamuk.2022-12-13.private-key.pem  --app_id 271969
 
