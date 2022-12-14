@@ -7,7 +7,7 @@ trigger:
 - xxxxxxx
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: windows-latest
 
 steps:
 - script: echo Hello, world!
@@ -24,11 +24,11 @@ steps:
     script: |
      gem install jwt
 
-      npm install -g jwt-cli
+   #   npm install -g jwt-cli
       
-      gh extensions install Link-/gh-token
+   #   gh extensions install Link-/gh-token
       
-      gh token
+   #   gh token
 
 - task: PowerShell@2
   inputs:
