@@ -29,8 +29,10 @@ steps:
       
           # Private key contents
           private_pem = File.read("$(System.SourceDirectory)/samplegithubappmarkcunninghamuk.2022-12-13.private-key.pem")
-          private_key = OpenSSL::PKey::RSA.new('private_pem')
+          private_key = OpenSSL::PKey::RSA.new(private_pem)
       
+          puts private_key
+
           # Generate the JWT
           payload = {
             # issued at time, 60 seconds in the past to allow for clock drift
