@@ -17,39 +17,10 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
-  
+      
+
 - task: PowerShell@2
   inputs:
     targetType: 'inline'
-    script: |
-      gem install jwt
-      
-      require 'openssl'
-          require 'jwt'  # https://rubygems.org/gems/jwt
-      
-          # Private key contents
-          private_pem = File.read("$(System.SourceDirectory)/samplegithubappmarkcunninghamuk.2022-12-13.private-key.pem")
-          private_key = OpenSSL::PKey::RSA.new(private_pem)
-      
-          puts private_key
-
-          # Generate the JWT
-          payload = {
-            # issued at time, 60 seconds in the past to allow for clock drift
-            iat: Time.now.to_i - 60,
-            # JWT expiration time (10 minute maximum)
-            exp: Time.now.to_i + (10 * 60),
-            # GitHub App's identifier
-            iss: "271969"
-          }
-      
-          jwt = JWT.encode(payload, private_key, "RS256")
-          puts jwt
-
-    
-
-#- task: PowerShell@2
-#  inputs:
-#    targetType: 'inline'
-#    script: 'gh repo create markcunninghamuk/myRepo1 --public'
+    script: 'gh repo create markcunninghamuk/myRepo1 --public'
 
