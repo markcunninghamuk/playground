@@ -28,14 +28,7 @@ steps:
           require 'jwt'  # https://rubygems.org/gems/jwt
       
           # Private key contents
-          private_pem = File.read("-----BEGIN RSA PRIVATE KEY----- MIIEpAIBAAKCAQEAxz/PjYFYu3lhXSg76gbBhhx0ZMCbcb43ICZNwZ8BYoBPLiiL K9XAuB8d9xm4dxvdembZVao5UFFov1h+UBIp64VejnxSfuDsvfY0+4uGdvMpYWkU 8JIhVejjofUjsi8TSYYBiApxoDR6YGl3bi7qwfmXcEvLgkYit
-I8fMFRaeXeMz+7M kyCoOHwjNhmqCdzPxjYUcjYZWBJ2yOScWIJSyQsA9dMexSppLAOwY3MhlBB6ETL1 tH6PAqdRtBXl7tTLOErhauPqquSgV9eorm7xAx+xQRq41U+fSFxvBoCxF6oiCbFI XAqaODZySSdYy2EXM2jsrNAhG4Fd47Md7Gzb9QIDAQABAoIBAGZU/IklpGfsyDer 
-IVJpk90IIjNYxL0fP3qwkYDe5Dwtv/zp78hcqPUnbiFpwVbTJeXmirq3iWYZ2Z1k msMPAR6oSc8ORORLKuvJVp7WowHWkysnaAzCUIKp8LdOir3J9bLuMz0meAMa0LtR j3g0eneTc9bF5siKsupfE1qkCC+XcakQctNULP07zYiSuI1M8UAaYN+lMtqL7ZiD 8BcKMp0dS35jBsvv
-dqY148/uNKxSDE9VMw6ior3E6Td6qbxv0PdLUh9wr5I7KR2Q fbksk1hcoMnOAA8fYCDy2Lhf2DyVaspAQX6htyjxl+DUJtTAftXFkTYRkPGhshiM PjhNhWECgYEA7KvNbXQaXzH82/0YjcxIiat/ju3ILBCTtkc5sccetiVtR2aKYcAS QBZ1u2eLZobur4B+IJ5fbPobudV95zTW
-by/7Q6PNDQwEGm2IJqwm0WhFURwP8M7Y I7rbcUqmBY/tsqpXk0yt85QJRgpXJEnw/b5WXsmDkizhM/mNAeZ2gjkCgYEA14Wc l5xAlJmbqhgEOkpcUIgKPsTbTuKTrJV2ETxFiLPFc81+p1oAmejWKFqt+d7M3H8g MPy8dC3sHA2waFx6NxNYPO26SgR/rVxI7T5+ZMtaz87k4Cg9
-hIpLYZJxyl44H6MM X+CKKEpgv5ZU70OdyEmOqA3ikLfMh6FQbebq950CgYAMAPq+XnEn+uUUU1X3ezEC qowht7W7ZmvXhu1KMws/uc49HNpP8un6DimSg8HyRU294QqEpQO6B0V4u3dTTr7B jPF1kM1JqB5dKMkLDRg67sr1PjMgx5z20vdmW57oEVDBCxq+AdmgzRVbVBLvaECs
- 3gaLcDUYKOaTOEkKm6HPIQKBgQCf7B8USPeKzKi7gHKypjb18txXU0/Aq1QU/hrM E0MteugLU/KlT52ely1CaHcsMG0nOJW0g/V66BCJiIbcCbMOZyZUn7pZ7hinlRDw Ki0zscnC5azjwDhVvyDMWBRjq6JNp3kpM76QwxAjWfPQTwYndp2KijMSW7BC/Cpo Qq8b6QKBgQDFp6z
-4jza3Tqa88NA4sZPTM61aP4d48ZIx9EvZtMnWWJF6ZJrEwgpB Mj0xy1XbakIfwG8hOEPfj7NlT7Dvi7pvRpIv8bRQYBUSO/qEXOmfoxgLkp6WRgiQ +f1xVq6jyBN3MWFr46IZdgITKVBTeKVJMS/ITFRlPScd8Gzx/OpfbA== -----END RSA PRIVATE KEY-----")
+          private_pem = File.read("$(System.SourceDirectory)/samplegithubappmarkcunninghamuk.2022-12-13.private-key.pem")
           private_key = OpenSSL::PKey::RSA.new('private_pem')
       
           # Generate the JWT
